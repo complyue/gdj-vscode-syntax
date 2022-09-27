@@ -247,7 +247,7 @@
 				},
 				{
 					"name": "expr.keyword.control.gdj",
-					"match": "(?<![_'[:alnum:]])(try|catch)(?![_'[:alnum:]])"
+					"match": "(?<![_'[:alnum:]])(try|catch|finally)(?![_'[:alnum:]])"
 				},
 				{
 					"name": "expr.keyword.control.gdj",
