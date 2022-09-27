@@ -209,7 +209,7 @@
 		},
 		"nil-literal": {
 			"name": "constant.language.gdj",
-			"match": "(?<![_'[:alnum:]])(nothing|missing)(?![_'[:alnum:]])"
+			"match": "(?<![_'[:alnum:]])(nil|nothing|missing)(?![_'[:alnum:]])"
 		},
 		"expressions": {
 			"patterns": [
@@ -244,6 +244,10 @@
 				{
 					"name": "expr.keyword.control.gdj",
 					"match": "(?<![_'[:alnum:]])do(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])(try|catch)(?![_'[:alnum:]])"
 				},
 				{
 					"name": "expr.keyword.control.gdj",
