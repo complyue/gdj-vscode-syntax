@@ -1,0 +1,287 @@
+{
+	"name": "GoDuck.jl",
+	"scopeName": "source.gdj",
+	"fileTypes": [
+		".gdj"
+	],
+	"patterns": [
+		{
+			"include": "#statements"
+		},
+		{
+			"include": "#batteries"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#literal"
+		},
+		{
+			"include": "#expressions"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#punctuations"
+		},
+		{
+			"include": "#qstring-tripple-double"
+		},
+		{
+			"include": "#qstring-tripple-single"
+		},
+		{
+			"include": "#qstring-tripple-backtick"
+		},
+		{
+			"include": "#qstring-double"
+		},
+		{
+			"include": "#qstring-single"
+		},
+		{
+			"include": "#qstring-backtick"
+		}
+	],
+	"repository": {
+		"statements": {
+			"patterns": [
+				{
+					"name": "storage.modifier.gdj",
+					"match": "(?<![_'[:alnum:]])(include|import|export)(?![_'[:alnum:]])"
+				}
+			]
+		},
+		"batteries": {
+			"patterns": [
+				{
+					"name": "support.module.gdj",
+					"match": "(?<![_'[:alnum:]])(console|debug)(?![_'[:alnum:]])"
+				},
+				{
+					"name": "support.function.gdj",
+					"match": "(?<![_'[:alnum:]])(isempty|error|assert)(?![_'[:alnum:]])"
+				}
+			]
+		},
+		"qstring-tripple-double": {
+			"name": "string.gdj",
+			"begin": "\"\"\"",
+			"end": "\"\"\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gdj",
+					"match": "\\\\."
+				}
+			]
+		},
+		"qstring-tripple-single": {
+			"name": "string.gdj",
+			"begin": "'''",
+			"end": "'''",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gdj",
+					"match": "\\\\."
+				}
+			]
+		},
+		"qstring-tripple-backtick": {
+			"name": "string.gdj",
+			"begin": "```",
+			"end": "```",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gdj",
+					"match": "\\\\."
+				}
+			]
+		},
+		"qstring-double": {
+			"name": "string.gdj",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gdj",
+					"match": "\\\\."
+				}
+			]
+		},
+		"qstring-single": {
+			"name": "string.gdj",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gdj",
+					"match": "\\\\."
+				}
+			]
+		},
+		"qstring-backtick": {
+			"name": "string.gdj",
+			"begin": "`",
+			"end": "`",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gdj",
+					"match": "\\\\."
+				}
+			]
+		},
+    "comment": {
+      "patterns": [
+        {
+          "include": "#comment_block"
+        },
+        {
+          "begin": "#",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.gdj"
+            }
+          },
+          "end": "\\n",
+          "name": "comment.line.number-sign.gdj"
+        }
+      ]
+    },
+    "comment_block": {
+      "patterns": [
+        {
+          "begin": "#=",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.begin.gdj"
+            }
+          },
+          "end": "=#",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.end.gdj"
+            }
+          },
+          "name": "comment.block.number-sign-equals.gdj",
+          "patterns": [
+            {
+              "include": "#comment_block"
+            }
+          ]
+        }
+      ]
+		},
+		"literal": {
+			"name": "literal.gdj",
+			"patterns": [
+				{
+					"include": "#numeric-literal"
+				},
+				{
+					"include": "#boolean-literal"
+				},
+				{
+					"include": "#nil-literal"
+				}
+			]
+		},
+		"numeric-literal": {
+			"patterns": [
+				{
+					"name": "constant.numeric.decimal.gdj",
+					"match": "\\b[0-9]([_0-9])*(\\.[0-9]([_0-9])+)?([eE][\\+\\-]?[0-9]+)?"
+				}
+			]
+		},
+		"boolean-literal": {
+			"patterns": [
+				{
+					"name": "constant.language.gdj",
+					"match": "(?<![_'[:alnum:]])true(?![_'[:alnum:]])"
+				},
+				{
+					"name": "constant.language.gdj",
+					"match": "(?<![_'[:alnum:]])false(?![_'[:alnum:]])"
+				}
+			]
+		},
+		"nil-literal": {
+			"name": "constant.language.gdj",
+			"match": "(?<![_'[:alnum:]])(nothing|missing)(?![_'[:alnum:]])"
+		},
+		"expressions": {
+			"patterns": [
+				{
+					"name": "expr.keyword.operator.gdj",
+					"match": "(?<![_'[:alnum:]])as(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.operator.gdj",
+					"match": "(?<![_'[:alnum:]])in(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])(if|else)(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])(case|of)(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])yield(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])for(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])while(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])do(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])(perform|behave|fallback)(?![_'[:alnum:]])"
+				},
+				{
+					"name": "expr.keyword.control.gdj",
+					"match": "(?<![_'[:alnum:]])default(?![_'[:alnum:]])"
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.other.symbolic.gdj",
+					"match": "\\@[_[:alpha:]][_![:alnum:]]*"
+				},
+				{
+					"name": "variable.other.alphanumeric.gdj",
+					"match": "[_[:alpha:]][_![:alnum:]]*"
+				}
+			]
+		},
+		"punctuations": {
+			"patterns": [
+				{
+					"name": "expr.keyword.operator.index.gdj",
+					"match": "[\\[\\]]+"
+				},
+				{
+					"name": "expr.keyword.operator.gdj",
+					"match": "[\\~\\=\\!\\@\\#\\$\\%\\^\\&\\|\\:\\<\\>\\?\\*\\+\\-\\/]+"
+				},
+				{
+					"name": "punctuation.separator.field.dot.gdj",
+					"match": "\\."
+				}
+			]
+		}
+	}
+}

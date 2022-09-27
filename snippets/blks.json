@@ -1,0 +1,58 @@
+{
+  "Usual Block": {
+    "prefix": "{",
+    "body": [
+      "{",
+      "  ${0}",
+      ""
+    ],
+    "description": "a usual code block"
+  },
+  "Scoped Block": {
+    "prefix": "{@",
+    "body": [
+      "{@",
+      "  ${0}",
+      "@"
+    ],
+    "description": "a scoped code block"
+  },
+  "Block Comment": {
+    "prefix": "#=",
+    "body": [
+      "#=${1:Tag} ${2:Summary}",
+      "${0:Details}",
+      "=#"
+    ],
+    "description": "a comment block"
+  },
+  "Inline Comment": {
+    "prefix": "#=",
+    "body": [
+      "#= $0 =#"
+    ],
+    "description": "a block comment"
+  },
+  "Code Cell": {
+    "prefix": "#%",
+    "body": [
+      "# %% # ${1:Run this cell to }",
+      "$0",
+      "# %# # ${2:See? The code above }"
+    ],
+    "description": "a code cell"
+  },
+  "Code Block": {
+    "prefix": "#{",
+    "body": [
+      "# %{ # ${1:Run this block to }",
+      "$0",
+      "# %% # ${2:Run this cell to }",
+      "",
+      "# %% # ${3:Run this cell to }",
+      "",
+      "# %} # End * $1"
+    ],
+    "description": "a code cell"
+  }
+}

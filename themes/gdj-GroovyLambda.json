@@ -1,0 +1,157 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"type": "dark",
+	"include": "./GroovyLambda-color-theme.json",
+	"tokenColors": [
+		{
+			"name": "Concurrency Control",
+			"scope": "keyword.concur.control",
+			"settings": {
+				"foreground": "#d3d630"
+			}
+		},
+		{
+			"name": "Keyword Control",
+			"scope": [
+				"keyword.control.gdj"
+			],
+			"settings": {
+				"foreground": "#c393cf"
+			}
+		},
+		{
+			"name": "Storage Type",
+			"scope": "storage.type.gdj",
+			"settings": {
+				"foreground": "#b9b9b9"
+			}
+		},
+		{
+			"name": "Storage Modifier",
+			"scope": "storage.modifier.gdj",
+			"settings": {
+				"foreground": "#dadada"
+			}
+		},
+		{
+			"name": "Support Module",
+			"scope": "support.module.gdj",
+			"settings": {
+				"foreground": "#c76267"
+			}
+		},
+		{
+			"name": "Support Function",
+			"scope": "support.function.gdj",
+			"settings": {
+				"foreground": "#dd676d"
+			}
+		},
+		{
+			"name": "String",
+			"scope": "string.gdj",
+			"settings": {
+				"foreground": "#ce9178"
+			}
+		},
+		{
+			"name": "Decimal",
+			"scope": "constant.numeric.decimal.gdj",
+			"settings": {
+				"foreground": "#5799df"
+			}
+		},
+		{
+			"name": "Line Comment",
+			"scope": "comment.line.gdj",
+			"settings": {
+				"foreground": "#6A9955"
+			}
+		},
+		{
+			"name": "Block Comment",
+			"scope": "comment.block.gdj",
+			"settings": {
+				"foreground": "#6A9955"
+			}
+		},
+		{
+			"name": "Expr Keyword",
+			"scope": "keyword.other.expr.gdj",
+			"settings": {
+				"foreground": "#d3d475"
+			}
+		},
+		{
+			"name": "IncExpr Keyword",
+			"scope": "keyword.other.iexpr.gdj",
+			"settings": {
+				"foreground": "#d3d475"
+			}
+		},
+		{
+			"name": "Channel Keyword",
+			"scope": "keyword.other.chan.gdj",
+			"settings": {
+				"foreground": "#d3d630"
+			}
+		},
+		{
+			"name": "Control in Expression",
+			"scope": "expr.keyword.control.gdj",
+			"settings": {
+				"foreground": "#64bacf"
+			}
+		},
+		{
+			"name": "Index Operator in Expression",
+			"scope": "expr.keyword.operator.index.gdj",
+			"settings": {
+				"foreground": "#7eca3f"
+			}
+		},
+		{
+			"name": "Alphanumeric Operator in Expression",
+			"scope": "expr.keyword.operator.alphanumeric.gdj",
+			"settings": {
+				"foreground": "#7eca3f"
+			}
+		},
+		{
+			"name": "Operator in Expression",
+			"scope": "expr.keyword.operator.gdj",
+			"settings": {
+				"foreground": "#ca7e3f"
+			}
+		},
+		{
+			"name": "Alphanumeric Variable",
+			"scope": "variable.other.alphanumeric.gdj",
+			"settings": {
+				"foreground": "#99e0c9"
+			}
+		},
+		{
+			"name": "Symbolic Variable",
+			"scope": "variable.other.symbolic.gdj",
+			"settings": {
+				"foreground": "#a5ce77"
+			}
+		},
+		{
+			"name": "Intrinsic Constant",
+			"scope": "constant.language.gdj",
+			"settings": {
+				"foreground": "#7373eb"
+			}
+		},
+		{
+			"name": "Intrinsic Variable",
+			"scope": "variable.language.gdj",
+			"settings": {
+				"foreground": "#b34d52"
+			}
+		}
+	],
+	"semanticHighlighting": true
+}

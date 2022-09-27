@@ -1,0 +1,77 @@
+{
+    "publisher": "ComplYue",
+    "license": "MIT",
+    "repository": {
+        "url": "https://github.com/complyue/gdj-vscode-syntax"
+    },
+    "name": "gdj-vscode-syntax",
+    "displayName": "GoDuck.jl Syntax & Snippets",
+    "description": "Syntax Highlighting (w/ theme bundled) & Basic Snippets for GoDuck.jl",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "gdj",
+                "aliases": [
+                    "GoDuck.jl",
+                    "gdj"
+                ],
+                "extensions": [
+                    ".gdj",
+                    ".gdi"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "configurationDefaults": {
+            "[gdj]": {
+                "editor.wordSeparators": "`~@#$%^&*()-=+[{]}\\|;:'\",.<>/?"
+            }
+        },
+        "snippets": [
+            {
+                "language": "gdj",
+                "path": "./snippets/blks.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "gdj",
+                "scopeName": "source.gdj",
+                "path": "./syntaxes/gdj.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "id": "GoDuck.jl - CalmWarm",
+                "label": "GoDuck.jl - Calm Warm",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gdj-CalmWarm.json"
+            },
+            {
+                "id": "CalmWarm",
+                "label": "Calm Warm",
+                "uiTheme": "vs-dark",
+                "path": "./themes/CalmWarm.json"
+            },
+            {
+                "id": "GoDuck.jl - Dark+",
+                "label": "GoDuck.jl - Dark+",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gdj-dark_plus.json"
+            },
+            {
+                "id": "GoDuck.jl - Groovy Lambda",
+                "label": "GoDuck.jl - Groovy Lambda",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gdj-GroovyLambda.json"
+            }
+        ]
+    }
+}
